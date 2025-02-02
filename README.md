@@ -63,10 +63,6 @@ Additionally, you will need a Google Translate API key (can be replaced by a dif
 
 ### 1. Fetch FAQs
 
-- **GET** `/api/faqs`
-
-  Fetch FAQs in the default language (English).
-
   Example:
   ```bash
   # Fetch FAQs in English (default)
