@@ -30,7 +30,7 @@ Additionally, you will need a Google Translate API key (can be replaced by a dif
 1. **Clone the repository:**
 
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/Subbu-chowdary/FAQ-backend
     cd backend-faq
     ```
 
@@ -45,9 +45,10 @@ Additionally, you will need a Google Translate API key (can be replaced by a dif
     Create a `.env` file at the root of the project and add your Google Translate API key and Redis configuration:
 
     ```env
-    GOOGLE_API_KEY=your-google-api-key
-    REDIS_HOST=localhost
+    MONGO_URI=MONGO_URI=mongodb+srv://<your-username>:<your-password>@portfolio.znzoq.mongodb.net/faqdb
+    REDIS_HOST=127.0.0.1
     REDIS_PORT=6379
+    
     ```
 
 4. **Start the server:**
@@ -67,6 +68,14 @@ Additionally, you will need a Google Translate API key (can be replaced by a dif
   Fetch FAQs in the default language (English).
 
   Example:
-
   ```bash
-  curl http://localhost:5000/api/faqs
+  # Fetch FAQs in English (default)
+  curl http://localhost:8000/api/faqs/
+
+  # Fetch FAQs in Hindi
+  curl http://localhost:8000/api/faqs/?lang=hi
+
+  # Fetch FAQs in Bengali
+  curl http://localhost:8000/api/faqs/?lang=bn
+  ```
+  
