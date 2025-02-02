@@ -15,7 +15,7 @@ This is a backend project to manage FAQs with multilingual support and caching u
 - **Redis**: In-memory data store for caching translations.
 - **Google Translate API**: Used for translating FAQ content.
 - **Mongoose**: MongoDB object modeling.
-  
+
 ## Prerequisites
 
 Before starting, ensure you have the following installed:
@@ -29,49 +29,50 @@ Additionally, you will need a Google Translate API key (can be replaced by a dif
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/Subbu-chowdary/FAQ-backend
-    cd backend-faq
-    ```
+   ```bash
+   git clone https://github.com/Subbu-chowdary/FAQ-backend
+   cd backend-faq
+   ```
 
 2. **Install dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. **Set up environment variables:**
 
-    Create a `.env` file at the root of the project and add your Google Translate API key and Redis configuration:
+   Create a `.env` file at the root of the project and add your Google Translate API key and Redis configuration:
 
-    ```env
-    MONGO_URI=MONGO_URI=mongodb+srv://<your-username>:<your-password>@portfolio.znzoq.mongodb.net/faqdb
-    REDIS_HOST=127.0.0.1
-    REDIS_PORT=6379
-    
-    ```
+   ```env
+   MONGO_URI=MONGO_URI=mongodb+srv://<your-username>:<your-password>@portfolio.znzoq.mongodb.net/faqdb
+   REDIS_HOST=127.0.0.1
+   REDIS_PORT=6379
+
+   ```
 
 4. **Start the server:**
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   redis-server
+   npm start
+   ```
 
-    The server should now be running at `http://localhost:5000`.
+   The server should now be running at `http://localhost:5000`.
 
 ## API Endpoints
 
 ### 1. Fetch FAQs
 
-  Example:
-  ```bash
-  # Fetch FAQs in English (default)
-  curl http://localhost:8000/api/faqs/
+Example:
 
-  # Fetch FAQs in Hindi
-  curl http://localhost:8000/api/faqs/?lang=hi
+```bash
+# Fetch FAQs in English (default)
+curl http://localhost:8000/api/faqs/
 
-  # Fetch FAQs in Bengali
-  curl http://localhost:8000/api/faqs/?lang=bn
-  ```
-  
+# Fetch FAQs in Hindi
+curl http://localhost:8000/api/faqs/?lang=hi
+
+# Fetch FAQs in Bengali
+curl http://localhost:8000/api/faqs/?lang=bn
+```
